@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exho - Signup</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/c0989a2b1c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="signup-container">
+        <img class="logo" src="/images/exho2.png" alt="">
+        <h1 class="fredericka">Exho</h1>
+
+        <% if (error) { %>
+            <p class="duplicate_username"><i class="fa-solid fa-triangle-exclamation" style="color: #FFD43B;"></i><%= " " + error %></p>
+        <% } %>
+
+        <form action="/signup" method="POST">
+            <input class="form-input" name="email" type="email" placeholder="abc@gmail.com" required autocomplete="off"><br>
+            <input class="form-input" name="contact" type="text" placeholder="contact no." pattern="[0-9]{10}" maxlength="10" minlength="10" required autocomplete="off"><br>
+            <input class="form-input" name="full_name" type="text" placeholder="full name" required autocomplete="off"><br>
+            <input class="form-input" name="username" type="text" placeholder="username" required autocomplete="off"><br>
+            <input class="form-input" name="password" type="password" placeholder="password" required autocomplete="off"><br>
+            <button type="submit" class="form-button">Sign Up</button>
+        </form>
+        
+        <hr><br>
+        <h3 class="signup_text">Already have an account? <a href="/">Login!</a></h3> 
+    </div>
+</body>
+</html>

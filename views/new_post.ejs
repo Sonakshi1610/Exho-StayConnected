@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c0989a2b1c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+       <div class="navbar-left">
+            <img src="/images/exho2.png" alt="Logo">
+            <span>Welcome, <%= username %> </span>
+        </div>
+
+        <div class="navbar-center">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="navbar-right">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"> &#9776; </label>
+            <a class="nav-text" href="/dashboard">Home</a>
+            <a class="nav-text" href="/posts">Posts</a>
+            <a class="nav-text" href="/profile">Profile</a>
+        </div>
+    </nav>
+
+    <h1 class="page_title">New Post...</h1>
+
+    <div class="post-wrapper">
+        <form action="/create_post" method="POST" enctype="multipart/form-data" class="post-card">
+            
+            <div class="post-left">
+                <label for="file-input" class="image-preview-wrapper">
+                    <img id="preview" src="/images/placeholder_image.webp" alt="Upload Preview">
+                    <div class="overlay">Click to Upload Image</div>
+                </label>
+                <input id="file-input" type="file" name="post_image" accept="image/*" required hidden>
+            </div>
+    
+            <div class="post-right">
+                <input type="text" name="title" class="post-title-input charm-regular" placeholder="Title..." required>
+                <textarea name="caption" class="post-caption-input" placeholder="Caption..." required></textarea>
+                <button type="submit" class="submit-btn">Post to Exho</button>
+            </div>
+    
+        </form>
+    </div>
+    
+    <script>
+        // Script to show image preview immediately after selection
+        const fileInput = document.getElementById('file-input');
+        const preview = document.getElementById('preview');
+    
+        fileInput.onchange = evt => {
+            const [file] = fileInput.files;
+            if (file) {
+                preview.src = URL.createObjectURL(file);
+            }
+        }
+    </script>
+
+</body>
+</html>

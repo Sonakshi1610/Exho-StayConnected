@@ -1,0 +1,598 @@
+
+body {
+  text-align: center;
+  background-color: #609966;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .nav_title_span {
+  font-weight: bold;
+} */
+
+h1 {
+  /* margin-top: 70px; */
+  /* font-family: "Fredericka the Great", serif; */
+  /* font-size: 120px; */
+  /* margin-bottom: 25px; */
+  color: #0d652d;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #0d652d;
+}
+
+.page_title {
+  text-align: left;
+  padding-left: 1rem;
+  font-family: 'fredericka the great';
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+button {
+  font-size: 25px;
+  background: #0d652d;
+  border: none;
+  border-radius: 6px;
+  padding: 9px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #46855d;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.top {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.middle {
+  border-radius: 0;
+}
+
+.bottom {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form {
+  text-align: center;
+}
+
+.fredericka {
+  font-family: "Fredericka the Great";
+  font-weight: lighter;
+  font-size: 100px;
+  margin: 0;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.container_1 {
+  display: none;
+}
+
+.container_2 {
+  width: 100%;
+  justify-content: center;
+  /* align-self: center; */
+}
+
+.logo {
+  width: 150px;
+  /* border-radius: 35px; */
+}
+
+
+.login_image {
+  width: 100%;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .login_image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .container_1 {
+    display: block;
+    width: 50%;
+    align-self: center;
+  }
+  .container_2 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    /* gap: 20px; */
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+    }
+}
+
+.form-input {
+  width: 35%;
+  height: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  margin: 2px;
+  background-color: rgb(211, 202, 202);
+}
+
+.form-input:focus {
+  border-color: #0d652d;
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(1, 51, 22);
+}
+
+.form-button {
+  width: 35%;
+  padding: 0.75rem 1rem;
+  background: #0d652d;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.form-button:hover {
+  background: #013012;
+}
+
+hr {
+  width: 50%;
+  margin-top: 18px;
+}
+
+.signup_text {
+  font-size: 13px;
+  color: #01250e;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+a {
+  color: #0f5316;
+  text-decoration: none;
+}
+
+.signup_container {
+  align-self: center;
+}
+
+.duplicate_username{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: #970808;
+  display: block;
+}
+
+.signup_success {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: #053001;
+  display: block;
+}
+
+
+.navbar {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #609966; /* rich green */
+    padding: 10px 20px;
+    /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    color: #07471e;
+    font-size: 1.2rem;
+}
+
+.navbar-left img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.navbar-center input {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    /* box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); */
+}
+
+.navbar-right a {
+    color: #0d652d;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-right a:hover {
+    color: #9DC08B; 
+
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar-center {
+      display: none;
+  }
+
+  .navbar-right {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #dff0e0;
+      flex-direction: column;
+      width: 100%;
+      display: none;
+  }
+
+  .navbar-right a {
+      margin: 15px 0;
+  }
+
+  #menu-toggle:checked + .menu-icon + .navbar-right {
+      display: flex;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+}
+
+                                            /* PROFILE */
+
+.container_profile{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:90px;
+}
+
+/* Profile Image */
+
+.profile-image img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:40px;
+}
+
+/* Green Username Bar */
+
+.details-bar_profile{
+  width:70%;
+  background:#5f8f63;
+  border-radius:12px;
+  padding:12px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin: 5px;
+}
+
+/* Text */
+
+.label_profile{
+  font-size:22px;
+  color:#0b5c2c;
+  font-weight: bold;
+}
+
+.initials_profile{
+  font-size:22px;
+  color:#0b5c2c;
+}
+
+.profile-image{
+  position: relative;
+  width: 120px;
+}
+
+.profile-image img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.upload-btn{
+  position:absolute;
+  bottom:0;
+  right:0;
+  background:#2e7d32;
+  color:white;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  font-size:14px;
+}
+
+                                                     /* new post page */
+.post-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: transparent; 
+    padding: 20px; 
+}
+
+.post-card {
+    display: flex;
+    flex-direction: row; /* Default: Side-by-side */
+    width: 80%;
+    max-width: 900px;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* Left side styling */
+.post-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-preview-wrapper {
+    width: 100%;
+    aspect-ratio: 1/1; /* Keeps it a perfect square */
+    background-color: #a5dba8;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.image-preview-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right side styling */
+.post-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-title-input {
+    background-color: #a5dba8;
+    border: none;
+    border-radius: 50px; /* Pill shape */
+    padding: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    outline: none;
+}
+
+.post-caption-input {
+    background-color: #a5dba8;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    flex-grow: 1; /* Makes it take up remaining space */
+    min-height: 200px;
+    resize: none;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: #2d5a27;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #1e3d1a;
+}
+
+.charm-regular {
+  font-family: "Charm", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+@media (max-width: 768px) {
+    .post-card {
+        flex-direction: column; /* Stack vertically */
+        width: 95%; /* Take up more width on small screens */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .post-wrapper {
+        min-height: auto; /* Allow the page to grow with content */
+        padding-top: 40px;
+    }
+
+    .post-title-input {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .post-caption-input {
+        min-height: 150px; /* Slightly shorter on mobile to save space */
+    }
+}
+
+                                                          /* my posts */
+
+/* Background wrapper */
+.posts-page-wrapper {
+  background-color: transparent; 
+  display: flex;
+  justify-content: center; 
+  padding: 20px 0;
+  height: 100vh;
+  box-sizing: border-box;
+  width: 100%;             /* Changed to 100% to allow centering */
+  align-items: flex-start;
+}
+
+.posts-main-container {
+  width: 100%;
+  height: 100%;
+  align-content: center;
+}
+
+/* The Big Div (The Scrollable Area) */
+.scroll-container {
+  background-color: #a5dba8; /* Moved background color here */
+  width: 35%;                /* Set to your desired 35% */
+  max-width: 800px;         
+  height: 90vh; 
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px;            
+  border-radius: 40px;       /* Moved border-radius here */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Hide scrollbar for a cleaner look (optional) */
+.scroll-container::-webkit-scrollbar {
+  width: 5px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #2d5a27;
+  border-radius: 10px;
+}
+
+/* Individual Post Sub-Divs (The Cards) */
+.individual-post-card {
+  background-color: #5b7c5e; 
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left; /* Ensures text inside card is left-aligned */
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.post-user-header {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.post-image-container {
+  width: 100%;
+  aspect-ratio: 1/1; 
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #d1e9ff;
+}
+
+.post-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-text-content {
+  margin-top: 15px;
+  color: #000;
+}
+
+.post-title-text {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "charm";
+}
+
+.post-caption-text {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #13410d;
+}
+
+.no-posts {
+  text-align: center;
+  color: #13410d;
+  margin-top: 50px;
+}
+
+.underline {
+  text-decoration: underline;
+  font-size: 15px;
+  font-family: "charm";
+}
+
+/* RESPONSIVE LOGIC */
+@media (max-width: 768px) {
+  .scroll-container {
+    width: 95%; /* Adjusts width for mobile/tablet */
+    border-radius: 20px;
+  }
+}

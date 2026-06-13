@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exho - Login</title>
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main_container">
+        <div class="container_1">
+            <img class="login_image" src="/images/exho_image.png" alt="">
+        </div>
+
+        <div class="container_2">
+            <img class="logo" src="/images/exho2.png" alt="">
+            <h1 class="fredericka">Exho</h1>
+
+            <% if (error) { %>
+                <p class="duplicate_username"><i class="fa-solid fa-triangle-exclamation" style="color: #FFD43B;"></i><%= error %></p>
+            <% } %>
+
+            <form action="/login" method="POST">
+                <input class="form-input" name="username" type="text" placeholder="username" required autocomplete="off"><br>
+                <input class="form-input" name="password" type="password" placeholder="password" required autocomplete="off"><br>
+                <button type="submit" class="form-button">Log In</button>
+            </form>
+
+            <hr><br><br>
+            <h3 class="signup_text">Do not have an account? <a href="/signup">Sign up!</a></h3>
+        </div>
+    </div>
+</body>
+</html>

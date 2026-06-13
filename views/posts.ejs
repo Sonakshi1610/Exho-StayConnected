@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/c0989a2b1c.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <nav class="navbar">
+       <div class="navbar-left">
+            <img src="/images/exho2.png" alt="Logo">
+            <span>Welcome, <%= username %> </span>
+        </div>
+
+        <div class="navbar-center">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="navbar-right">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"> &#9776; </label>
+            <a class="nav-text" href="/dashboard">Home</a>
+            <a class="nav-text" href="/new_post">New</a>
+            <a class="nav-text" href="/profile">Profile</a>
+        </div>
+    </nav>
+
+    <h1 class="page_title">My Posts...</h1>
+
+    <div class="posts-main-container">
+        <div class="posts-page-wrapper">
+            <!-- <div class="feed-outer-box"> -->
+                <div class="scroll-container">
+                    <% if (posts.length > 0) { %>
+                        <% posts.forEach(post => { %>
+                            <div class="individual-post-card">
+                                <div class="post-user-header">
+                                    <strong><%= username %></strong>
+                                </div>
+
+                                <div class="post-image-container">
+                                    <img src="<%= post.image_url %>" alt="User Post">
+                                </div>
+
+                                <div class="post-text-content">
+                                    <h3 class="post-title-text"><%= post.title %></h3>
+                                    <p class="post-caption-text"><%= post.caption %></p>
+                                </div>
+                            </div>
+                        <% }); %>
+                    <% } else { %>
+                        <div class="no-posts">
+                            <p>You haven't posted anything yet!</p>
+                            <a href="/new_post" class="underline">Create your first post</a>
+                        </div>
+                    <% } %>
+                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/c0989a2b1c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+       <div class="navbar-left">
+            <img src="/images/exho2.png" alt="Logo">
+            <span>Welcome, <%= username %> </span>
+        </div>
+
+        <div class="navbar-center">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="navbar-right">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"> &#9776; </label>
+            <a class="nav-text" href="/dashboard">Home</a>
+            <a class="nav-text" href="/posts">Posts</a>
+            <a class="nav-text" href="/new_post">New</a>
+        </div>
+    </nav>
+
+    <h1 class="page_title">Profile...</h1>
+
+    <div class="container_profile">
+
+        
+            <form action="/upload_profile" method="POST" enctype="multipart/form-data" class="profile-image">
+
+                <img src="<%= profile_pic || 'https://cdn-icons-png.flaticon.com/512/149/149071.png' %>">
+            
+                <label for="profile-upload" class="upload-btn">
+                    <i class="fa-solid fa-plus"></i>
+                </label>
+            
+                <input type="file" id="profile-upload" name="profile_pic" hidden onchange="this.form.submit()">
+            
+            </form>
+        
+    
+        <div class="details-bar_profile">
+            <span class="label_profile">Username</span>
+            <span class="initials_profile"> <%= username %> </span>
+        </div>
+        <div class="details-bar_profile">
+            <span class="label_profile">Name</span>
+            <span class="initials_profile"> <%= name %> </span>
+        </div>
+        <div class="details-bar_profile">
+            <span class="label_profile">Email</span>
+            <span class="initials_profile"> <%= email %> </span>
+        </div>
+        <div class="details-bar_profile">
+            <span class="label_profile">Contact</span>
+            <span class="initials_profile"> <%= contact %> </span>
+        </div>
+    
+    </div>
+    
+</body>
+</html>
